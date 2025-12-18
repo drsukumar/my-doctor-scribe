@@ -85,7 +85,7 @@ def process_consultation(api_key, audio_file, style_guide):
 
         # 3. Generate Content
         with st.spinner("🧠 Analyzing conversation & Formatting (Tanglish -> English)..."):
-            model = genai.GenerativeModel("gemini-1.5-flash")
+            model = genai.GenerativeModel("gemini-1.5-flash-latest")
             
             # The Mega-Prompt
             prompt = f"""
@@ -188,4 +188,5 @@ if st.session_state.case_sheet:
 
 # --- FOOTER ---
 st.markdown("---")
+
 st.caption("🔒 Privacy Note: Audio is processed temporarily by Google Gemini and deleted immediately. No data is stored on this server.")
